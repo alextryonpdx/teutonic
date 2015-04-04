@@ -10,6 +10,15 @@
 \*------------------------------------*/
 
 // Load any external files you have here
+// get jQuery
+function blm_init_method() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script( 'easing', get_template_directory_uri().'/js/jquery.easing.js', array( 'jquery' ), '1.3' );
+    wp_enqueue_script( 'slides', get_template_directory_uri().'/js/slides.min.jquery.js', array( 'jquery', 'easing' ) );
+    }
+add_action('wp_enqueue_scripts', 'blm_init_method');
+
+
 
 /*------------------------------------*\
 	Theme Support

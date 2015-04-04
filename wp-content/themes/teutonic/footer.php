@@ -3,11 +3,13 @@
 
 				<!-- copyright -->
 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
+					&copy; <?php echo date('Y'); ?> TEUTONIC WINE COMPANY
 				</p>
-				<!-- /copyright -->
-
+				<!-- /social media links -->
+				<p class="social-links">
+					FIND US ON <a href="https://www.facebook.com/pages/Teutonic-Wine-Company/114632478546837">FACEBOOK</a>
+					AND <a href="https://twitter.com/Teutonicwines">TWITTER</a>
+				</p>
 			</footer>
 			<!-- /footer -->
 
