@@ -30,19 +30,17 @@
 
 		<div class="col-5of8">
 
-		<?php
-			$args = array( 'category' === 'blog' );
-			$blog_posts = get_posts( $args );
-			foreach ( $blog_posts as $post ) :
-			  setup_postdata( $post ); ?>
+			<?php
+				query_posts('category_name=blog');
+				while (have_posts()) : the_post(); ?>	
 
-				<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-				<h3 class="post-date"><?php the_date() ?></h3>
+					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<h3 class="post-date"><?php the_date() ?></h3>
 
-				<?php the_content(); ?>
+					<?php the_content(); ?>
 
-			<?php endforeach; 
-			wp_reset_postdata(); ?>
+				<?php endwhile?>
+
 		</div>
 
 		<div class="col-3of8">

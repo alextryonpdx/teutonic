@@ -8,24 +8,75 @@
 		<div class="events">
 
 			<?php
-				$args = array( 'category' => 'events' );
-				$event_posts = get_posts( $args );
-				foreach ( $event_posts as $post ) :
-				  setup_postdata( $post ); ?>
 
-					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<h3 class="post-date"><?php the_date() ?></h3>
+				$today = date('Ymd');
+				$posts = query_posts(array(
+					'meta_key' => 'event_date', // name of custom field
+					'orderby' => 'meta_value_num',
+					'order' => 'ASC',
+					'category_name=events',
+					'meta_query' =>  array(
+				        'key'		=> 'event_date',
+				        'compare'	=> '>=',
+				        'value'		=> $today,
+					    )));
 
-					<?php the_content(); ?>
+				if( $posts ) {
+					foreach( $posts as $post ) {
 
-			<?php endforeach; 
-			wp_reset_postdata(); ?>
+						setup_postdata( $post );
+
+							$image = get_field('event_image') ?>
+							<img style="float: right"src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
+							<h3><?php the_title() ?></h3>
+							<h2><?php the_field('event_location_name') ?></h2>
+							<h3><?php the_field('event_address') ?></h3>
+
+							
+							<h4><?php the_field('event_start') ?> - <?php the_field('event_end') ?></h4>
+
+		
+
+							<?php the_content(); ?>
+							<!--<?php the_field('event_map')?>    Need to implement some jquery to use maps-->
+							<?php 
+					} 
+
+						wp_reset_postdata(); 
+				}?>
+
+
+
+
+<?php 
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		</div>
-
-
-			
-			
 	
 
 	</section>
