@@ -24,6 +24,24 @@
             tests: {}
         });
         </script>
+<style>
+header {
+	margin: 0 0 3%;
+}
+
+
+body {
+    width: 100%;
+    background-image: url("<?php echo get_template_directory_uri(); ?>/img/bg.jpg");
+    padding: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font: 300 12px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  	color: #444;
+}
+
+</style>
 
 	</head>
 	<body <?php body_class(); ?>>

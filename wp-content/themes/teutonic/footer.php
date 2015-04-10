@@ -1,6 +1,31 @@
+<style>
+	.footer {
+		text-align: center;
+		margin: 2% auto 3%; 
+		font-size: 14px;
+		line-height: 1.3em;
+		display: block;
+		clear: both;
+		border-top: 2px solid rgba(157, 157, 157, .6);
+		padding: 4% 0 0;
+	}
+
+	.social-links a {
+		color: #710411;
+	}
+
+	#footer-content {
+	    line-height: .5em;
+	    padding-bottom: 1em;
+	    letter-spacing: .2em;
+	}
+
+</style>
+
+
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-
+				<div id="footer-content">
 				<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> TEUTONIC WINE COMPANY
@@ -10,6 +35,7 @@
 					FIND US ON <a href="https://www.facebook.com/pages/Teutonic-Wine-Company/114632478546837">FACEBOOK</a>
 					AND <a href="https://twitter.com/Teutonicwines">TWITTER</a>
 				</p>
+			</div>
 			</footer>
 			<!-- /footer -->
 
@@ -27,6 +53,6 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
-
+		<link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/css/custom-styles.css' media='all' />
 	</body>
 </html>
