@@ -120,6 +120,15 @@ margin: -.75em;
 }
 
 
+
+/**************** Vineyard *******************/
+#vineyard-content {
+    -webkit-column-count: 2; 
+    -moz-column-count: 2; 
+    column-count: 2;
+}
+
+
 /**************** MainPage (Slides)***********/
 .slides figure:first-child {
 position: relative;
