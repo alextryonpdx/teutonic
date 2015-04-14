@@ -1,11 +1,15 @@
-<?php get_header(); ?>
 
 
+
+<?php /* Template Name: ABOUT */ get_header(); ?>
+
+
+<h1 class="page-title">Meet the Winemakers</h1>
 
 	<main role="main">
 		<!-- section -->
 
-					<h1 class="page-title"><?php the_title(); ?></h1>
+					
 		<section id="content-section">
 
 

@@ -69,11 +69,11 @@ margin: -.75em;
 
 /****NAV BAR ****/
 .main-nav {
-    width: 98%;
+    width: 100%;
     padding: 2em;
     background-color: rgba(0,0,0,.55);
     text-align: justify;
-    margin: 0 1%;
+    margin: 0;
 }
 .main-nav ul {
     text-align: justify;
@@ -120,12 +120,22 @@ margin: -.75em;
 }
 
 
+/**************** 2-Column *******************/
 
-/**************** Vineyard *******************/
-#vineyard-content {
+.two-column-content {
     -webkit-column-count: 2; 
     -moz-column-count: 2; 
     column-count: 2;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside:avoid;
+    -moz-page-break-inside:avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    margin: 3em 0;
+}
+
+.two-column-content p {
+  display: inline-block;
 }
 
 
@@ -158,5 +168,14 @@ height: 400px;
 vertical-align: bottom;
 overflow: hidden;
 }
+
+
+
+
+
+
+
+
+
 
 
