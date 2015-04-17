@@ -14,7 +14,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700|UnifrakturMaguntia' rel='stylesheet' type='text/css'>
 		<?php wp_head(); ?>
 		<script>
         // conditionizr.com
@@ -24,10 +24,13 @@
             tests: {}
         });
         </script>
+        <script src="//use.typekit.net/usi2udo.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
+
 <style>
-header {
-	margin: 0 0 3%;
-}
+
+
 
 
 body {
@@ -37,8 +40,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font: 300 12px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  	color: #444;
+    font: 300 12px/1.4 'PT Serif', serif;
+    color: #444;
 }
 
 </style>

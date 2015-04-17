@@ -1,24 +1,5 @@
 <style>
-	.footer {
-		text-align: center;
-		margin: 2% auto 3%; 
-		font-size: 14px;
-		line-height: 1.3em;
-		display: block;
-		clear: both;
-		border-top: 2px solid rgba(157, 157, 157, .6);
-		padding: 4% 0 0;
-	}
 
-	.social-links a {
-		color: #710411;
-	}
-
-	#footer-content {
-	    line-height: .5em;
-	    padding-bottom: 1em;
-	    letter-spacing: .2em;
-	}
 
 </style>
 

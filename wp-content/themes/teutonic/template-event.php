@@ -62,11 +62,11 @@
 									<h2><?php the_field('event_location_name') ?></h2>
 									<h3><?php the_field('event_address') ?></h3>
 								</div>								
+									
+								<div class="event-content" >
 									<img src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
-
-									<div class="event-content" >
-										<?php the_content(); ?>
-									</div>
+									<?php the_content(); ?>
+								</div>
 
 									<!--<?php the_field('event_map')?>    Need to implement some jquery to use maps-->
 							</div>
@@ -81,6 +81,13 @@
 		line-height: .25em;
 		font-weight: bold;
 		margin-bottom: 2em;
+	}
+	.event-content {
+		margin: 0 4em;
+		text-align: center;
+	}
+	.event-content img {
+		margin: 1em auto;
 	}
 
 	.date-time {

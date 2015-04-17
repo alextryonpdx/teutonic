@@ -31,8 +31,8 @@
 }
 
 #content-section p {
-  font-family: Times;
-  font-size: 1.75em;
+  font-family: 'PT Serif', serif;
+  font-size: 1.5em;
 }
 
 /**** Page Title ****/
@@ -46,7 +46,7 @@
 
 .page-title:first-letter {
   font-size: 36px;
-  font-family: "cabazon", ;
+  font-family: 'UnifrakturMaguntia', serif;
   font-weight: 400;
   }
 
@@ -59,6 +59,10 @@ margin: -.75em;
 
 
 /************** HEADER ************/
+
+header {
+  margin: 0 0 3%;
+}
 
 /*** LOGO ***/
 .logo img{
@@ -96,17 +100,17 @@ margin: -.75em;
 }
 
 .main-nav li a {
-    color: white;
+    color: rgb(234, 232, 217);
     margin: -.75em -.75em -.15em;
     padding: .75em .75em .15em;
 }
 
 .main-nav li a:hover {
-  border-bottom: white solid;
+  border-bottom: rgb(234, 232, 217) 3px solid;
 }
 
 .current-menu-item a {
-    border-bottom: #7CD9AD solid !important;
+    border-bottom: #7CD9AD 3px solid !important;
     color: #7CD9AD !important;
 }
 
@@ -152,6 +156,7 @@ position: absolute;
 top: 50%;
 transform: translateY(-50%);
 overflow: hidden;
+width: 100%;
 }
 .slides figure img {
 min-height: 100%;
@@ -169,13 +174,50 @@ vertical-align: bottom;
 overflow: hidden;
 }
 
+/************* A2A SHARE Button *************/
+.addtoany_share_save_container a {
+  display: none;
+  text-align: center !important;
+  font-size: 1.5em !important;
+  margin: 2em auto 2em;
+  color: #710411;
+}
 
+.a2a_dd {
+  display: block !important;
+}
 
+.a2a_menu a:hover, 
+.a2a_menu a:focus, 
+.a2a_menu a:active,
+.a2a_menu a:visited {
+  background: inherit !important;
+  border: none !important;
+}
 
+.a2a_menu_show_more_less {
+  display: none !important;
+}
 
+/********************* FOOTER *****************/
 
+  .footer {
+    text-align: center;
+    margin: 2% auto 3%; 
+    font-size: 14px;
+    line-height: 1.3em;
+    display: block;
+    clear: both;
+    border-top: 2px solid rgba(157, 157, 157, .6);
+    padding: 4% 0 0;
+  }
 
+  .social-links a {
+    color: #710411;
+  }
 
-
-
-
+  #footer-content {
+    line-height: .75em;
+    padding: 1em;
+    letter-spacing: .25em;
+  }
