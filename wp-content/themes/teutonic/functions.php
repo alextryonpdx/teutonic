@@ -442,6 +442,56 @@ function create_post_type_html5()
     ));
 }
 
+
+
+function wine_post_type() {
+
+    $labels = array(
+        'name'                => _x( 'wines', 'Post Type General Name', 'text_domain' ),
+        'singular_name'       => _x( 'wine', 'Post Type Singular Name', 'text_domain' ),
+        'menu_name'           => __( 'Wine', 'text_domain' ),
+        'name_admin_bar'      => __( 'Wine', 'text_domain' ),
+        'parent_item_colon'   => __( 'Wine', 'text_domain' ),
+        'all_items'           => __( 'All Wines', 'text_domain' ),
+        'add_new_item'        => __( 'Add New Wine', 'text_domain' ),
+        'add_new'             => __( 'New Wine', 'text_domain' ),
+        'new_item'            => __( 'New Wine', 'text_domain' ),
+        'edit_item'           => __( 'Edit Wine', 'text_domain' ),
+        'update_item'         => __( 'Update Wine', 'text_domain' ),
+        'view_item'           => __( 'View Wine', 'text_domain' ),
+        'search_items'        => __( 'Search Wines', 'text_domain' ),
+        'not_found'           => __( 'No wines found', 'text_domain' ),
+        'not_found_in_trash'  => __( 'No wines found in Trash', 'text_domain' ),
+    );
+    $args = array(
+        'label'               => __( 'wine', 'text_domain' ),
+        'description'         => __( 'wine', 'text_domain' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'custom-fields', ),
+        'taxonomies'          => array(),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_position'       => 5,
+        'show_in_admin_bar'   => true,
+        'show_in_nav_menus'   => true,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+    );
+    register_post_type( 'wine', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'wine_post_type', 0 );
+
+
+
+
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
@@ -459,8 +509,6 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 }
 
 ?>
-
-
 
 
 

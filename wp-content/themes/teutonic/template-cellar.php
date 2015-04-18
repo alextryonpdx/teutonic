@@ -9,12 +9,13 @@
 	text-align: center;
 	background: rgba(0, 0, 0, .6);
 	opacity: 0;
-	padding: 25% 10%;
+	padding: 30% 10%;
+	transition: opacity .5s, padding .75s;
 	-webkit-transition: opacity .5s, padding .75s;
 }
 .overlay:hover {
 	opacity: 1;
-	padding: 40% 10%;
+	padding: 50% 10%;
 }
 .wine-info{
 	font-size: 2em;
@@ -53,24 +54,19 @@
 		<section id="content-section">
 
 		<h1 class="page-title"><?php the_title(); ?></h1>
-		<p>
-			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=white" name="white">white</a>
-			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=red" name="red">red</a>
-			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=sparkling">Sparkling   </a>
-			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=import">Import   </a>
-		</p>
+
 
 
 			<?php
-				if(isset($_GET['style'])){$_SESSION['style'] = $_GET['style'];}
-				else {$_SESSION['style'] = "";}
-				query_posts(array(
-					'category_name=wine',
-					'meta_query' =>  array(
-				        'key'		=> 'style',
-				        'compare'	=> '=',
-				        'value'		=> $_SESSION['style'],))); 
-
+#				if(isset($_GET['style'])){$_SESSION['style'] = $_GET['style'];}
+#				else {$_SESSION['style'] = "";}
+#				query_posts(array(
+#					'category_name=wine',
+#					'meta_query' =>  array(
+#				        'key'		=> 'style',
+#				        'compare'	=> '=',
+#				        'value'		=> $_SESSION['style'],))); 
+			query_posts('post_type=wine');
 				while (have_posts()) : the_post(); ?>	
 					
 					<a class="wine-link" href="#">
@@ -82,7 +78,6 @@
 							<div class="overlay">
 								<div class="wine-info">
 								<?php the_field('name') ?><br />
-								<?php the_field('style') ?><br />
 								<?php the_field('vintage') ?><br />
 								<?php the_field('location') ?><br />
 								</div>

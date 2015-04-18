@@ -3,7 +3,8 @@
 
 </style>
 
-
+	</section>
+	</main>
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 				<div id="footer-content">

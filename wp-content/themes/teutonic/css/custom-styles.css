@@ -67,17 +67,17 @@ header {
 /*** LOGO ***/
 .logo img{
     max-width: 80%;
-    margin: 2em 25% 4em;
+    margin: 2em 25% 2em;
 }
 
 
 /****NAV BAR ****/
 .main-nav {
     width: 100%;
-    padding: 2em;
+    padding: 1.75em 1.5em;
     background-color: rgba(0,0,0,.55);
     text-align: justify;
-    margin: 0 auto 2em;
+    margin: 0 auto 1.5em;
 }
 .main-nav ul {
     text-align: justify;
@@ -94,13 +94,13 @@ header {
 .main-nav li {
     display: inline-block;
     font-family: "Open Sans", georgia, serif;
-    font-size: 2em;
+    font-size: 1.75em;
     line-height: 100%;
     text-align: center;
 }
 
 .main-nav li a {
-    color: rgb(234, 232, 217);
+    color: #fff;
     margin: -.75em -.75em -.15em;
     padding: .75em .75em .15em;
 }
