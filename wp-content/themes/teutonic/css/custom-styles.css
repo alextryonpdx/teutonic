@@ -67,7 +67,7 @@ header {
 /*** LOGO ***/
 .logo img{
     max-width: 80%;
-    margin: 4em 25% 6em;
+    margin: 2em 25% 4em;
 }
 
 
@@ -172,6 +172,8 @@ display: block;
 height: 400px;
 vertical-align: bottom;
 overflow: hidden;
+width: 100%;
+margin: -5em 0 2em 0;
 }
 
 /************* A2A SHARE Button *************/
