@@ -53,11 +53,24 @@
 		<section id="content-section">
 
 		<h1 class="page-title"><?php the_title(); ?></h1>
+		<p>
+			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=white" name="white">white</a>
+			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=red" name="red">red</a>
+			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=sparkling">Sparkling   </a>
+			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=import">Import   </a>
+		</p>
 
-		
 
 			<?php
-				query_posts('category_name=wine');
+				if(isset($_GET['style'])){$_SESSION['style'] = $_GET['style'];}
+				else {$_SESSION['style'] = "";}
+				query_posts(array(
+					'category_name=wine',
+					'meta_query' =>  array(
+				        'key'		=> 'style',
+				        'compare'	=> '=',
+				        'value'		=> $_SESSION['style'],))); 
+
 				while (have_posts()) : the_post(); ?>	
 					
 					<a class="wine-link" href="#">
@@ -78,7 +91,8 @@
 						</div>
 					</a>
 					
-				<?php endwhile?>
+				<?php endwhile;
+				wp_reset_query();?>
 
 
 	</section>
