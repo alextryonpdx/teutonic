@@ -1,7 +1,4 @@
-<style>
 
-
-</style>
 
 	</section>
 	</main>
@@ -37,4 +34,5 @@
 		</script>
 		<link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/css/custom-styles.css' media='all' />
 	</body>
+			<link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/css/custom-styles.css' media='all' />
 </html>

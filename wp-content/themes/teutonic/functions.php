@@ -447,8 +447,8 @@ function create_post_type_html5()
 function wine_post_type() {
 
     $labels = array(
-        'name'                => _x( 'wines', 'Post Type General Name', 'text_domain' ),
-        'singular_name'       => _x( 'wine', 'Post Type Singular Name', 'text_domain' ),
+        'name'                => __( 'wine', 'Post Type General Name', 'text_domain' ),
+        'singular_name'       => __( 'wine', 'Post Type Singular Name', 'text_domain' ),
         'menu_name'           => __( 'Wine', 'text_domain' ),
         'name_admin_bar'      => __( 'Wine', 'text_domain' ),
         'parent_item_colon'   => __( 'Wine', 'text_domain' ),
