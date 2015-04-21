@@ -28,3 +28,34 @@ function filter_posts($style) {
 #				        'key'		=> 'style',
 #				        'compare'	=> '=',
 #				        'value'		=> $style,))); ?>
+
+
+
+
+
+				///query_posts('category_name=wine');
+
+
+
+				if(!$style) {
+						$style = "";
+					};
+
+										<?php
+					$style = var_dump(parse_url($_SERVER['REDIRECT_URL']));
+					query_posts(array(
+					'category_name=events',
+					'meta_query' =>  array(
+				        'key'		=> 'style',
+				        'compare'	=> '=',
+				        'value'		=> $style,))); ?>
+
+
+
+
+				        		<p>
+			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=white" name="white">white</a>
+			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=red" name="red">red</a>
+			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=sparkling">Sparkling   </a>
+			<a href="<?php echo $_SERVER['REDIRECT_URL'] ?>?style=import">Import   </a>
+		</p>

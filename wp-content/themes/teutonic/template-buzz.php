@@ -18,6 +18,8 @@
 		float: right;
 	}
 
+
+
 </style>
 
 
@@ -33,12 +35,12 @@
 			<?php
 				query_posts('category_name=buzz');
 				while (have_posts()) : the_post(); ?>	
+					<div class="full-post">
+						<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+						<h3 class="post-date"><?php the_date() ?></h3>
 
-					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<h3 class="post-date"><?php the_date() ?></h3>
-
-					<?php the_content(); ?>
-
+						<?php the_content(); ?>
+					</div>
 				<?php endwhile?>
 
 		</div>

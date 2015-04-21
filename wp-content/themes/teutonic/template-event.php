@@ -17,7 +17,7 @@
 					'meta_key' => 'event_date', // name of custom field
 					'orderby' => 'meta_value_num',
 					'order' => 'ASC',
-					'category_name=events',
+					'post_type' => 'event',
 					'meta_query' =>  array(
 				        'key'		=> 'event_date',
 				        'compare'	=> '>=',
@@ -65,7 +65,7 @@
 									
 								<div class="event-content" >
 									<img src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
-									<?php the_content(); ?>
+									<?php the_field('description'); ?>
 								</div>
 
 									<!--<?php the_field('event_map')?>    Need to implement some jquery to use maps-->
@@ -75,6 +75,7 @@
 				
 
 <style>
+
 	.event-heading {
 		border-bottom: 2px solid rgba(157, 157, 157, .6);
 		border-width: 80%;
@@ -84,10 +85,11 @@
 	}
 	.event-content {
 		margin: 0 4em;
-		text-align: center;
+		font-size: 1.5em;
 	}
 	.event-content img {
 		margin: 1em auto;
+		display: block;
 	}
 
 	.date-time {

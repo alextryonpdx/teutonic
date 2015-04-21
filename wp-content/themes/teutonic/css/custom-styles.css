@@ -26,7 +26,7 @@
 
 #content-section {
   display: block;
-  margin: -2em 0 4em;
+  margin: 1em 1em 4em;
   overflow: hidden;
 }
 
@@ -74,15 +74,15 @@ header {
 /****NAV BAR ****/
 .main-nav {
     width: 100%;
-    padding: 1.75em 1.5em;
+    padding: 1.75em 0;
     background-color: rgba(0,0,0,.55);
     text-align: justify;
-    margin: 0 auto 1.5em;
+    margin: 0 auto 1em;
 }
 .main-nav ul {
     text-align: justify;
     line-height: 0;
-    margin: 0% 5%;
+    margin: 0% 3%;
     padding: 0;
 }
 .main-nav ul:after {
@@ -116,13 +116,17 @@ header {
 
 /*************General Posts****************/
 .post-title {
-  font-size: 1.5em;
+  font-size: 1.75em;
+  border-bottom: 2px solid rgba(157, 157, 157, .6);
 }
 
 .post-date {
   font-weight: lighter;
 }
-
+.full-post {
+  /*border-bottom: 2px solid rgba(157, 157, 157, .6);*/
+  margin-bottom: 4em;
+}
 
 /**************** 2-Column *******************/
 
@@ -215,7 +219,8 @@ margin: -5em 0 2em 0;
     padding: 4% 0 0;
   }
 
-  .social-links a {
+  .social-links a,
+  a {
     color: #710411;
   }
 
@@ -226,7 +231,7 @@ margin: -5em 0 2em 0;
   }
 
 
-  /****************** WINES ************/
+  /****************** WINE CELLAR ************/
   .overlay {
   position: absolute;
   width: 100%;
@@ -271,4 +276,20 @@ margin: -5em 0 2em 0;
   position: relative;
   overflow: hidden;
   width: 100%
+}
+
+.wine-categories {
+  display: inline-block;
+  font-size: 1.35em !important;
+  margin: -.75em 0 -.75em 1em;
+}
+.wine-categories input,
+.wine-categories a {
+  border: none;
+  background: none;
+  color: #710411;
+}
+.wine-categories input:hover,
+.wine-categories a:hover {
+  color: rgb(68, 68, 68);
 }

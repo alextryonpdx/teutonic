@@ -6,19 +6,47 @@
 
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
+		<p class="wine-categories">Find Wines by Category: 
+			<form class="wine-categories" method="GET">
+				<input type="submit" name="sb" value="Red" />
+				<input type="submit" name="sb" value="White" />
+				<input type="submit" name="sb" value="Sparkling" />
+				<input type="submit" name="sb" value="Import" />
+				<input type="submit" name="sb" value="All Wines" />
+			</form>	</p>
+		<p class="wine-categories"><a href="shipping-policy/"> Read our Shipping Policy</a></p>
+<style>
 
+</style>
+			<?php
+			if(isset($_GET['sb'])) 
+				if ($_GET['sb'] == "All Wines")
+					$style = '';
+				else
+					$style = $_GET['sb'];
+			else
+				$style = '';
+			?>
+			<div class="row">
+
+				<div class="event">
 
 			<?php
-#				if(isset($_GET['style'])){$_SESSION['style'] = $_GET['style'];}
-#				else {$_SESSION['style'] = "";}
-#				query_posts(array(
-#					'category_name=wine',
-#					'meta_query' =>  array(
-#				        'key'		=> 'style',
-#				        'compare'	=> '=',
-#				        'value'		=> $_SESSION['style'],))); 
-			query_posts('post_type=wine');
-				while (have_posts()) : the_post(); ?>	
+				$posts = query_posts(array(
+					'post_type' => 'wine',
+					'meta_query' => array(
+        					array(
+				            'key' => 'style', 
+				            'value' => $style, 
+				            'compare' => 'LIKE'
+				        )
+				    )
+									    ));
+
+				if( $posts ) {
+					foreach( $posts as $post ) { 
+
+									setup_postdata( $post ); ?>	
 					
 					<a class="wine-link" href="<?php the_permalink(); ?>">
 						<div class="wine">
@@ -37,8 +65,11 @@
 						</div>
 					</a>
 					
-				<?php endwhile;
-				wp_reset_query();?>
+				<?php };
+				wp_reset_query();
+			}
+
+			?>
 
 
 	</section>
@@ -47,4 +78,3 @@
 
 
 <?php get_footer(); ?>
- 
