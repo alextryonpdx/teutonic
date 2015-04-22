@@ -37,11 +37,10 @@
 
 /**** Page Title ****/
 .page-title {
-
-  padding-bottom: 5px;
   font-size: 28px;
   text-transform: none;
   border-bottom: 2px solid rgba(157, 157, 157, .6);
+  margin: 0 0 1em 0;
   }
 
 .page-title:first-letter {
@@ -77,7 +76,7 @@ header {
     padding: 1.75em 0;
     background-color: rgba(0,0,0,.55);
     text-align: justify;
-    margin: 0 auto 1em;
+    margin: 0 auto 0;
 }
 .main-nav ul {
     text-align: justify;
@@ -125,7 +124,7 @@ header {
 }
 .full-post {
   /*border-bottom: 2px solid rgba(157, 157, 157, .6);*/
-  margin-bottom: 4em;
+  margin-bottom: 8em;
 }
 
 /**************** 2-Column *******************/
@@ -177,7 +176,24 @@ height: 400px;
 vertical-align: bottom;
 overflow: hidden;
 width: 100%;
-margin: -5em 0 2em 0;
+margin: -3em 0 2em 0;
+}
+
+/**************** MainPage (Content)***********/
+.title:first-letter {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 28px;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+.col-1of3 {
+  width: 31%;
+  display: inline-block;
+  float: left;
+  margin: auto 1.16666666666%;
 }
 
 /************* A2A SHARE Button *************/
@@ -292,4 +308,127 @@ margin: -5em 0 2em 0;
 .wine-categories input:hover,
 .wine-categories a:hover {
   color: rgb(68, 68, 68);
+}
+
+
+/********** Single Wine Page *******/
+#single-wine-image {
+  width: 35%;
+  margin: 0 3%;
+  float: left;
+  background: #fff;
+  display: inline-block;
+  overflow: hidden;
+  max-height: 450px;"
+}
+#single-wine-image img {
+  max-height: inherit;
+  display: block;
+  margin: 0 auto;
+}
+
+.single-wine-info {
+  width: 55%;
+  margin: 0 4% 0 0;
+  float: left;
+  display: inline-block;
+  padding: 0 4% 0 0;
+}
+.wine-heading {
+  margin: 0 20% 0 0; 
+  border-bottom: 2px solid rgba(157, 157, 157, .6);
+}
+
+
+
+/*************** 8 column (3+5) *********/
+          /* BLOG + BUZZ */
+.col-5of8 {
+  width: 62%;
+  margin: 0 1% 0;
+  padding: 0 1% 0 0;
+  display: inline-block;
+  float: left;
+}
+.col-5of8 img{
+  width: 100%;
+  height: auto;
+}
+.col-3of8 {
+  width: 36%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float: right;
+}
+.row {
+  display: block;
+  margin-top: 1em;
+}
+
+
+/**************** EVENTS *****************/
+.event-heading {
+  border-bottom: 2px solid rgba(157, 157, 157, .6);
+  border-width: 80%;
+  line-height: .25em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+.event-content {
+  margin: 0 4em;
+  font-size: 1.5em;
+}
+.event-content img {
+  margin: 1em auto;
+  display: block;
+}
+
+.date-time {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 0;
+  margin: 0 -100% 0 0;
+}
+.event-date {
+  margin-bottom: 1em !important;
+  border-bottom: 2px solid rgba(157, 157, 157, .6);
+}
+.dow {
+  font-size: 1em !important;
+}
+.month {
+  font-size: 1.25em !important;
+}
+.day {
+  font-size: 2em !important;
+}
+.row {
+  display: table;
+  width: 100%;
+  clear: both;
+  margin-bottom: 100px;
+}
+.time {
+  font-size: .5em !important;
+}
+.event {
+  margin: inherit auto 5em !important;
+}
+.left {
+  float: left;
+  clear: left;
+}
+.right {
+  float: right;
+  clear: right;
+}
+.col {
+  margin: 0 .5% auto;
+}
+.col1of10 {
+  width: 8%;
+}
+.col9of10 {
+  width: 88%;
 }

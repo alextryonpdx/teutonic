@@ -15,9 +15,7 @@
 				<input type="submit" name="sb" value="All Wines" />
 			</form>	</p>
 		<p class="wine-categories"><a href="<?php echo get_permalink( get_page_by_path( 'buy-wine' ) ) ?>">Shop for available wines</a></p>
-<style>
 
-</style>
 			<?php
 			if(isset($_GET['sb'])) 
 				if ($_GET['sb'] == "All Wines")

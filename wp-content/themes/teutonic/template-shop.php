@@ -15,9 +15,7 @@
 				<input type="submit" name="sb" value="All Wines" />
 			</form>	</p>
 		<p class="wine-categories"><a href="shipping-policy/"> Read our Shipping Policy</a></p>
-<style>
 
-</style>
 			<?php
 			if(isset($_GET['sb'])) 
 				if ($_GET['sb'] == "All Wines")
