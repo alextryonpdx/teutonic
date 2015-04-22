@@ -5,18 +5,29 @@
 	<main role="main">
 		<!-- section -->
 
-		<a href="javascript:history.back(1)">back</a>
-					
-		<section id="content-section">
+		<section id="content-section">			
+<!-- 
+<div class="single-wine-nav" style="display: block; margin: 1em 0 2em 2em;">
+			<p class="wine-categories">Find Wines by Category: 
+			<form class="wine-categories" method="GET">
+				<input type="submit" name="sb" value="Red" />
+				<input type="submit" name="sb" value="White" />
+				<input type="submit" name="sb" value="Sparkling" />
+				<input type="submit" name="sb" value="Import" />
+				<input type="submit" name="sb" value="All Wines" />
+			</form>	</p>
+		<p class="wine-categories"><a href="shipping-policy/"> Read our Shipping Policy</a></p>
+</div> -->
+
 	
 	<div style="width: 35%; margin: 0 3%; float: left; background: #fff; display: inline-block; overflow: hidden; max-height: 450px;">
 		<img style="max-height: inherit; display: block; margin: 0 auto;" src="<?php $image = get_field('image'); echo $image['url'] ?>">
 	</div>
 
+
 	<div class="single-wine-info" style="width: 55%; margin: 0 4% 0 0; float: left; display: inline-block; padding: 0 4% 0 0;">
 		<div class="wine-heading" style="margin: 0 20% 0 0; border-bottom: 2px solid rgba(157, 157, 157, .6);">
 			<h1><?php the_field('vintage') ?>  <?php the_field('name') ?></h1>
-			<h2><?php the_field('style') ?></h2>
 			<h2><?php the_field('location') ?></h2>
 		</div>
 

@@ -1,5 +1,5 @@
 
-<?php /* Template Name: Cellar Page */ get_header(); ?>
+<?php /* Template Name: Wine Shop Page */ get_header(); ?>
 
 	<main role="main">
 		<section id="content-section">
@@ -14,7 +14,7 @@
 				<input type="submit" name="sb" value="Import" />
 				<input type="submit" name="sb" value="All Wines" />
 			</form>	</p>
-		<p class="wine-categories"><a href="<?php echo get_permalink( get_page_by_path( 'buy-wine' ) ) ?>">Shop for available wines</a></p>
+		<p class="wine-categories"><a href="shipping-policy/"> Read our Shipping Policy</a></p>
 <style>
 
 </style>
@@ -36,12 +36,18 @@
 					'post_type' => 'wine',
 					'meta_query' => array(
         					array(
+				            'key' => 'inventory', 
+				            'value' => 0, 
+				            'compare' => '>'
+				        ),
+					'meta_query' => array(
+        					array(
 				            'key' => 'style', 
 				            'value' => $style, 
 				            'compare' => 'LIKE'
 				        )
 				    )
-									    ));
+									    )));
 
 				if( $posts ) {
 					foreach( $posts as $post ) { 
