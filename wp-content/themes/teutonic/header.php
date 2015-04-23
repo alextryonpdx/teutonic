@@ -30,19 +30,12 @@
 
 <style>
 
-
-
-
 body {
-    width: 100%;
-    background-image: url("<?php echo get_template_directory_uri(); ?>/img/bg.jpg");
-    padding: 2%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font: 300 12px/1.4 'PT Serif', serif;
-    color: #444;
+	background-image: url("<?php echo get_template_directory_uri(); ?>/img/bg.jpg") !important;
 }
+
+
+
 
 </style>
 

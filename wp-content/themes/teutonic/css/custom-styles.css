@@ -1,4 +1,12 @@
-
+body {
+    width: 100%;
+    padding: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font: 300 12px/1.2 'PT Serif', serif;
+    color: #444;
+}
 
 .wrapper {
     width: 80%;
@@ -65,9 +73,45 @@ header {
 
 /*** LOGO ***/
 .logo img{
-    max-width: 80%;
-    margin: 2em 25% 2em;
+    width: 40%;
+    margin: 2em 30% 2em;
 }
+
+/*********** MOBILE NAV *******************/
+
+.mn-navigation-wrap {
+  background: rgb(73, 73, 72) !important;
+}
+
+html.mn-open {
+  background: rgb(73, 73, 72) !important;
+}
+
+html.mn-open .mn-navigation-wrap {
+  top: 0;
+  right: 0;
+  left: inherit;
+  z-index: 10000;
+  height: 100%;
+  height: 23em;
+  overflow-y: hidden;
+  width: 45%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 1em 1em 0;
+  background: rgb(73, 73, 72) !important;
+}
+html.mn-open .mn-navigation-wrap li {
+  font-family: 'PT Serif', serif !important;
+}
+.current_page_item a {
+  background-color: rgb(124, 217, 173) !important;
+}
+.icono-cross {
+  width: 0 !important;
+}
+
 
 
 /****NAV BAR ****/
@@ -93,7 +137,7 @@ header {
 .main-nav li {
     display: inline-block;
     font-family: "Open Sans", georgia, serif;
-    font-size: 1.75em;
+    font-size: 1.5em;
     line-height: 100%;
     text-align: center;
 }
@@ -111,7 +155,9 @@ header {
 .current-menu-item a {
     border-bottom: #7CD9AD 3px solid !important;
     color: #7CD9AD !important;
+    background: none !important;
 }
+
 
 /*************General Posts****************/
 .post-title {
@@ -130,15 +176,15 @@ header {
 /**************** 2-Column *******************/
 
 .two-column-content {
-    -webkit-column-count: 2; 
-    -moz-column-count: 2; 
-    column-count: 2;
-    -webkit-column-break-inside: avoid;
-    -moz-column-break-inside:avoid;
-    -moz-page-break-inside:avoid;
-    page-break-inside: avoid;
-    break-inside: avoid-column;
-    margin: 3em 0;
+  -webkit-column-count: 2; 
+  -moz-column-count: 2; 
+  column-count: 2;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside:avoid;
+  -moz-page-break-inside:avoid;
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+  margin: 0 0;
 }
 
 .two-column-content p {
@@ -190,10 +236,10 @@ margin: -3em 0 2em 0;
 }
 
 .col-1of3 {
-  width: 31%;
+  width: 29%;
   display: inline-block;
   float: left;
-  margin: auto 1.16666666666%;
+  margin: auto 2.16666666666%;
 }
 
 /************* A2A SHARE Button *************/
@@ -227,7 +273,7 @@ margin: -3em 0 2em 0;
   .footer {
     text-align: center;
     margin: 2% auto 3%; 
-    font-size: 14px;
+    font-size: 1.25em;
     line-height: 1.3em;
     display: block;
     clear: both;
@@ -241,7 +287,7 @@ margin: -3em 0 2em 0;
   }
 
   #footer-content {
-    line-height: .75em;
+    line-height: 1.3em;
     padding: 1em;
     letter-spacing: .25em;
   }
@@ -258,13 +304,13 @@ margin: -3em 0 2em 0;
   text-align: center;
   background: rgba(0, 0, 0, .6);
   opacity: 0;
-  padding: 30% 10%;
+  padding: 30% 2%;
   transition: opacity .5s, padding .75s;
   -webkit-transition: opacity .5s, padding .75s;
 }
 .overlay:hover {
   opacity: 1;
-  padding: 50% 10%;
+  padding: 50% 2%;
 }
 .wine-info{
   font-size: 2em;
@@ -295,9 +341,12 @@ margin: -3em 0 2em 0;
 }
 
 .wine-categories {
-  display: inline-block;
+  display: block;
   font-size: 1.35em !important;
-  margin: -.75em 0 -.75em 1em;
+  /*margin: -.75em 0 -.75em 1em;*/
+}
+.wine-categories input {
+  display: inline-block;
 }
 .wine-categories input,
 .wine-categories a {
@@ -319,25 +368,114 @@ margin: -3em 0 2em 0;
   background: #fff;
   display: inline-block;
   overflow: hidden;
-  max-height: 450px;"
+  max-height: 450px;
 }
 #single-wine-image img {
   max-height: inherit;
   display: block;
   margin: 0 auto;
+
 }
 
 .single-wine-info {
   width: 55%;
   margin: 0 4% 0 0;
+  line-height: 2em;
   float: left;
   display: inline-block;
-  padding: 0 4% 0 0;
+  padding: 0 1% 0 0;
 }
 .wine-heading {
-  margin: 0 20% 0 0; 
   border-bottom: 2px solid rgba(157, 157, 157, .6);
+  width: 45%;
+  margin: 0 12% 0 0;
+  line-height: 2em;
+  float: left;
+  display: inline-block;
+  padding: 0 1% 0 0;
 }
+#add-to-cart {
+  font-size: 1.25em;
+  width: 33%;
+  padding: 1em 2em;
+  background-color: #444;
+  border: solid 1px #202020;
+  color: #eae8d9;
+  border-radius: 5px;
+}
+#quantity-input {
+  width: 33%;
+  border: solid 1px #444;
+  border-radius: 3px;
+  padding: .25em 1em;
+}
+#quantity-label {
+  font-size: 1.35em;
+}
+
+/***********CONTACT***********************/
+  #col-1of2 {
+    width: 48%;
+    margin: -2% 1% 0;
+    padding: 2% 1% 0 0;
+    display: inline-block;
+    float: left;
+  }
+  #col-2of2 {
+    width: 48%;
+    margin: 0 1% 0 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+  }
+
+  .row {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .wpcf7 {
+    line-height: .75em;
+    font-size: 1.1em;
+  }
+
+  .wpcf7-form-control {
+    border-radius: 5px;
+    margin: .5em auto;
+    width: 100%;
+    background-color: #faf0f0;
+  }
+
+  .wpcf7-submit {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 1em 2.5em;
+    margin: -1em 0 0 0;
+    color: #fff;
+    background-color: #565656;
+    border-width: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1em;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    text-transform: none;
+  }
+
+  .wpcf7-textarea {
+    max-height: 6em;
+  }
+
+
 
 
 
@@ -431,4 +569,188 @@ margin: -3em 0 2em 0;
 }
 .col9of10 {
   width: 88%;
+}
+
+
+
+/************** MEDIA QUERIES ****************************/
+
+
+@media only screen and (max-width : 1200px) {
+.main-nav li {
+  font-size: 1.25em;
+}
+.main-nav {
+  padding: 1.25em 0;
+}
+#add-to-cart {
+  font-size: 1.25em;
+  padding: 1em .5em;
+}
+
+
+
+
+}
+
+
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 12px;
+  }
+.slides {
+  height: 320px;
+}
+.main-nav li {
+  font-size: .85em;
+  font-weight: normal;
+}
+.main-nav {
+  padding: 1em 0;
+}
+.logo img {
+  width: 80%;
+  margin: 2em 10%;
+}
+#col-1of2,
+#col-2of2 {
+  margin: 0 2%;
+  width: 96%;
+}
+.two-column-content {
+  -webkit-column-count: 1; 
+  -moz-column-count: 1; 
+  column-count: 1;
+}
+.col-1of3 {
+  width: 40%;
+  margin: 0 5% 2em;
+  font-size: .85em;
+}
+/*.col-3of8 {
+  display: none;
+}
+.col-5of8 {                  PROBLEM!!!!
+  width: 98%;
+  overflow: scroll;
+}*/
+.single-wine-info {
+  width: 90%;
+  display: block;
+  margin: 0 5%;
+}
+#single-wine-image {
+  width: 35%;
+  height: auto;
+  display: inline-block;
+}
+.wine-heading {
+  width: 59%;
+  margin: 20% 0% 0;
+  float: right;
+  display: inline-block;
+}
+
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+.wrapper {
+  width: 90%;
+}
+.slides {
+  height: 280px;
+}
+.main-nav li {
+  font-size: .85em;
+  font-weight: normal;
+}
+.main-nav {
+  padding: 1em 0;
+}
+.wine-link {
+  width: 48%;
+  margin: inherit 1%;
+}
+.overlay {
+  opacity: .6;
+  padding: 30% 2% 10%;
+}
+.overlay:hover {
+  padding: 30% 2% 10%;
+}
+.wine-info {
+  font-size: 1.75em;
+}
+.col-1of3 {
+  width: 90%;
+  margin: 0 5% 3em;
+  float: none;
+}
+.col-1of3 img {
+  display: none;
+}
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+.main-nav {
+    display: none;
+}
+.logo img {
+  padding: 0 0 1em;
+  border-bottom: 2px solid rgba(157, 157, 157, .6);
+}
+
+#footer-content {
+  line-height: 1.5em;
+}
+.single-wine-info {
+  width: 90%;
+  display: block;
+  margin: 0 5%;
+}
+#single-wine-image {
+  width: 45%;
+  height: auto;
+  margin: 0 25%;
+  float: none;
+  display: block;
+}
+.wine-heading {
+  width: 85%;
+  margin: 0 7% 0;
+  text-align: center;
+  float: none;
+  display: block;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+.wrapper {
+  width: 95%;
+}
+.slides {
+  display: none
+}
+
+.wine-info {
+  font-size: 1.25em;
+}
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+.slides {
+  height: 180px;
+}
+
+
 }

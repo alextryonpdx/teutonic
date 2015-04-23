@@ -6,14 +6,14 @@
 
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
-		<p class="wine-categories">Find Wines by Category: 
+		<p class="wine-categories">Find Wines by Category: </p>
 			<form class="wine-categories" method="GET">
 				<input type="submit" name="sb" value="Red" />
 				<input type="submit" name="sb" value="White" />
 				<input type="submit" name="sb" value="Sparkling" />
 				<input type="submit" name="sb" value="Import" />
 				<input type="submit" name="sb" value="All Wines" />
-			</form>	</p>
+			</form>	
 		<p class="wine-categories"><a href="<?php echo get_permalink( get_page_by_path( 'buy-wine' ) ) ?>">Shop for available wines</a></p>
 
 			<?php
