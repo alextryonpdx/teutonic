@@ -51,10 +51,12 @@
 									<img src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
 									<p><?php the_field('description'); ?></p>
 								</div>
-
+										<?php the_content(); ?>
 								<div class="event-links">
+
 									<p class="event-link prev"><?php previous_post_link();?></p>
 									<p class="event-link next"><?php next_post_link();?></p>
+									<p><a href="javascript:history.go(-1)">Go Back</a></p>
 								</div>
 
 							</div>
@@ -62,6 +64,7 @@
 								
 
 	</section>
+
 	<!-- /section -->
 	</main>
 

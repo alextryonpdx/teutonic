@@ -76,7 +76,7 @@
 									<?php the_field('description'); ?>
 								</div>
 
-									<!--<?php the_field('event_map')?>    Need to implement some jquery to use maps-->
+								<?php the_content(); ?>
 							</div>
 						</div>
 					</div>
