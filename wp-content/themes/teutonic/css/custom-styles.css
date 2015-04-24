@@ -83,10 +83,12 @@ header {
 
 .mn-navigation-wrap {
   background: rgb(73, 73, 72) !important;
+  box-shadow: -3px 4px 24px !important;
 }
 
 html.mn-open {
   background: rgb(73, 73, 72) !important;
+  box-shadow: -3px 4px 24px;
 }
 
 html.mn-open .mn-navigation-wrap {
@@ -94,8 +96,8 @@ html.mn-open .mn-navigation-wrap {
   right: 0;
   left: inherit;
   z-index: 10000;
-  height: 100%;
-  height: 23em;
+  height: auto;
+
   overflow-y: hidden;
   width: 45%;
   font-size: 1.5em;
@@ -103,6 +105,7 @@ html.mn-open .mn-navigation-wrap {
   text-align: right;
   padding: 0 1em 1em 0;
   background: rgb(73, 73, 72) !important;
+  box-shadow: -3px 4px 24px !important;
 }
 html.mn-open .mn-navigation-wrap li {
   font-family: 'PT Serif', serif !important;
@@ -113,7 +116,9 @@ html.mn-open .mn-navigation-wrap li {
 .icono-cross {
   width: 0 !important;
 }
-
+.children {
+  display: none;
+}
 
 
 /****NAV BAR ****/
@@ -247,8 +252,11 @@ margin: -3em 0 2em 0;
   display: none;
   text-align: center !important;
   font-size: 1.5em !important;
-  margin: 2em auto 2em;
+  margin: 2em auto 2em !important;
   color: #710411;
+}
+.addtoany_share_save_container {
+  margin: 2em auto;
 }
 
 .a2a_dd {
@@ -714,12 +722,12 @@ margin: -3em 0 2em 0;
 .slides {
   height: 280px;
 }
-.main-nav li {
-  font-weight: normal;
-  font-size: 1.35em;
+.logo img {
+  padding: 0 0 1em;
+  border-bottom: 2px solid rgba(157, 157, 157, .6);
 }
 .main-nav {
-  padding: 1em 0;
+    display: none;
 }
 .wine-link {
   width: 48%;
@@ -760,13 +768,6 @@ margin: -3em 0 2em 0;
 }
 
 @media only screen and (max-width: 600px) {
-.main-nav {
-    display: none;
-}
-.logo img {
-  padding: 0 0 1em;
-  border-bottom: 2px solid rgba(157, 157, 157, .6);
-}
 
 #footer-content {
   line-height: 1.5em;
@@ -791,7 +792,7 @@ margin: -3em 0 2em 0;
   display: block;
 }
 .col-5of8 iframe {
-  max-width: 80vw !important;
+  max-width: 75vw !important;
 }
 .event-content,
 .event-content img {
@@ -801,9 +802,6 @@ margin: -3em 0 2em 0;
 }
 
 @media only screen and (max-width: 500px) {
-.wrapper {
-  width: 95%;
-}
 .slides {
   display: none
 }
