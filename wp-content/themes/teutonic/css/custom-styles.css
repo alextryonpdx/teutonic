@@ -505,25 +505,31 @@ margin: -3em 0 2em 0;
 /**************** EVENTS *****************/
 .event-heading {
   border-bottom: 2px solid rgba(157, 157, 157, .6);
-  border-width: 80%;
-  line-height: .25em;
+  line-height: .5em;
   font-weight: bold;
   margin-bottom: 2em;
 }
+#event-title,
+#event-address {
+  font-weight: normal;
+}
+
 .event-content {
-  margin: 0 4em;
+  margin: 0 2.5%;
   font-size: 1.5em;
+  width: 95%
 }
 .event-content img {
+  width: 80%;
   margin: 1em auto;
   display: block;
 }
 
 .date-time {
   text-align: center;
-  text-transform: uppercase;
   line-height: 0;
-  margin: 0 -100% 0 0;
+  margin: 4.35em -100% 0 0;
+  width: 100%;
 }
 .event-date {
   margin-bottom: 1em !important;
@@ -534,6 +540,7 @@ margin: -3em 0 2em 0;
 }
 .month {
   font-size: 1.25em !important;
+  text-transform: uppercase;
 }
 .day {
   font-size: 2em !important;
@@ -545,7 +552,7 @@ margin: -3em 0 2em 0;
   margin-bottom: 100px;
 }
 .time {
-  font-size: .5em !important;
+  font-size: .75em !important;
 }
 .event {
   margin: inherit auto 5em !important;
@@ -567,7 +574,37 @@ margin: -3em 0 2em 0;
 .col9of10 {
   width: 88%;
 }
-
+.small-date-time {
+  font-weight: bold;
+  display: none;
+}
+/***************** SINGLE EVENT ******************/
+.single-event-content {
+  margin-bottom: 10em;
+}
+.single-event-content img {
+  width: 80%;
+  margin: 2em 10%;
+}
+.single-event-content p {
+  font-size: 1em;
+}
+.event-links {
+  text-align: center;
+  letter-spacing: .1em;
+  display: block;
+}
+.event-link {
+  margin: 0 10%;
+  width: 30%;
+  font-size: 1.25em
+}
+.next {
+  float: right;
+}
+.prev {
+  float: left;
+}
 
 
 /************** MEDIA QUERIES ****************************/
@@ -575,7 +612,7 @@ margin: -3em 0 2em 0;
 
 @media only screen and (max-width : 1200px) {
 .main-nav li {
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 .main-nav {
   padding: 1.25em 0;
@@ -596,7 +633,7 @@ margin: -3em 0 2em 0;
   height: 320px;
 }
 .main-nav li {
-  font-size: .85em;
+  font-size: 1.3em;
   font-weight: normal;
 }
 .main-nav {
@@ -654,8 +691,18 @@ margin: -3em 0 2em 0;
   float: right;
   display: inline-block;
 }
-
-
+.col1of10 {
+  width: 14%;
+}
+.col9of10 {
+  width: 82%;
+}
+.event-links p {
+  font-size: 1em
+}
+.single-event-content p {
+  font-size: 1.5em;
+}
 
 }
 
@@ -668,8 +715,8 @@ margin: -3em 0 2em 0;
   height: 280px;
 }
 .main-nav li {
-  font-size: .85em;
   font-weight: normal;
+  font-size: 1.35em;
 }
 .main-nav {
   padding: 1em 0;
@@ -695,6 +742,18 @@ margin: -3em 0 2em 0;
 }
 .col-1of3 img {
   display: none;
+}
+.big-date-time {
+  display: none;
+}
+.small-date-time {
+  display: block;
+}
+.col1of10 {
+  display: none;
+}
+.col9of10 {
+  width: 98%;
 }
 
 
@@ -733,6 +792,10 @@ margin: -3em 0 2em 0;
 }
 .col-5of8 iframe {
   max-width: 80vw !important;
+}
+.event-content,
+.event-content img {
+  width: 95%
 }
 
 }
