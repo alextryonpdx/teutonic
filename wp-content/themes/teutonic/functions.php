@@ -18,8 +18,6 @@ function blm_init_method() {
     }
 add_action('wp_enqueue_scripts', 'blm_init_method');
 
-
-
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
@@ -408,50 +406,50 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 
 
 
-function wine_post_type() {
+// function wine_post_type() {
 
-    $labels = array(
-        'name'                => __( 'wine', 'Post Type General Name', 'text_domain' ),
-        'singular_name'       => __( 'wine', 'Post Type Singular Name', 'text_domain' ),
-        'menu_name'           => __( 'Wine', 'text_domain' ),
-        'name_admin_bar'      => __( 'Wine', 'text_domain' ),
-        'parent_item_colon'   => __( 'Wine', 'text_domain' ),
-        'all_items'           => __( 'All Wines', 'text_domain' ),
-        'add_new_item'        => __( 'Add New Wine', 'text_domain' ),
-        'add_new'             => __( 'New Wine', 'text_domain' ),
-        'new_item'            => __( 'New Wine', 'text_domain' ),
-        'edit_item'           => __( 'Edit Wine', 'text_domain' ),
-        'update_item'         => __( 'Update Wine', 'text_domain' ),
-        'view_item'           => __( 'View Wine', 'text_domain' ),
-        'search_items'        => __( 'Search Wines', 'text_domain' ),
-        'not_found'           => __( 'No wines found', 'text_domain' ),
-        'not_found_in_trash'  => __( 'No wines found in Trash', 'text_domain' ),
-    );
-    $args = array(
-        'label'               => __( 'wine', 'text_domain' ),
-        'description'         => __( 'wine', 'text_domain' ),
-        'labels'              => $labels,
-        'supports'            => array( 'title', 'custom-fields', ),
-        'taxonomies'          => array(),
-        'hierarchical'        => false,
-        'public'              => true,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'menu_position'       => 5,
-        'show_in_admin_bar'   => true,
-        'show_in_nav_menus'   => true,
-        'can_export'          => true,
-        'has_archive'         => false,
-        'exclude_from_search' => false,
-        'publicly_queryable'  => true,
-        'capability_type'     => 'post',
-    );
-    register_post_type( 'wine', $args );
+//     $labels = array(
+//         'name'                => __( 'wine', 'Post Type General Name', 'text_domain' ),
+//         'singular_name'       => __( 'wine', 'Post Type Singular Name', 'text_domain' ),
+//         'menu_name'           => __( 'Wine', 'text_domain' ),
+//         'name_admin_bar'      => __( 'Wine', 'text_domain' ),
+//         'parent_item_colon'   => __( 'Wine', 'text_domain' ),
+//         'all_items'           => __( 'All Wines', 'text_domain' ),
+//         'add_new_item'        => __( 'Add New Wine', 'text_domain' ),
+//         'add_new'             => __( 'New Wine', 'text_domain' ),
+//         'new_item'            => __( 'New Wine', 'text_domain' ),
+//         'edit_item'           => __( 'Edit Wine', 'text_domain' ),
+//         'update_item'         => __( 'Update Wine', 'text_domain' ),
+//         'view_item'           => __( 'View Wine', 'text_domain' ),
+//         'search_items'        => __( 'Search Wines', 'text_domain' ),
+//         'not_found'           => __( 'No wines found', 'text_domain' ),
+//         'not_found_in_trash'  => __( 'No wines found in Trash', 'text_domain' ),
+//     );
+//     $args = array(
+//         'label'               => __( 'wine', 'text_domain' ),
+//         'description'         => __( 'wine', 'text_domain' ),
+//         'labels'              => $labels,
+//         'supports'            => array( 'title', 'custom-fields', ),
+//         'taxonomies'          => array(),
+//         'hierarchical'        => false,
+//         'public'              => true,
+//         'show_ui'             => true,
+//         'show_in_menu'        => true,
+//         'menu_position'       => 5,
+//         'show_in_admin_bar'   => true,
+//         'show_in_nav_menus'   => true,
+//         'can_export'          => true,
+//         'has_archive'         => false,
+//         'exclude_from_search' => false,
+//         'publicly_queryable'  => true,
+//         'capability_type'     => 'post',
+//     );
+//     register_post_type( 'wine', $args );
 
-}
+// }
 
-// Hook into the 'init' action
-add_action( 'init', 'wine_post_type', 0 );
+// // Hook into the 'init' action
+// add_action( 'init', 'wine_post_type', 0 );
 
 function event_post_type() {
 
@@ -544,6 +542,99 @@ function buzz_post_type() {
 add_action( 'init', 'buzz_post_type', 0 );
 
 
+/*------------------------------------*\
+    Add Fields to Products
+\*------------------------------------*/
+
+function woo_add_custom_general_fields() {
+
+  global $woocommerce, $post;
+  
+  echo '<div class="options_group">';
+  
+  // Custom fields will be created here...
+
+    // Location
+    woocommerce_wp_text_input( 
+        array( 
+            'id'          => 'location', 
+            'label'       => __( 'Location', 'woocommerce' ), 
+            'placeholder' => 'Vineyard and/or Region',
+            'desc_tip'    => 'true',
+            'description' => __( 'Enter the vineyard, region, or other location notes.', 'woocommerce' ) 
+        )
+    );
+
+    // Vintage
+    woocommerce_wp_text_input( 
+        array( 
+            'id'          => 'vintage', 
+            'label'       => __( 'Vintage', 'woocommerce' ), 
+            'placeholder' => '2015',
+            'type'        => 'number',
+            )
+        
+    );
+
+    // Abv
+    woocommerce_wp_text_input( 
+        array( 
+            'id'          => 'abv', 
+            'label'       => __( 'Abv %', 'woocommerce' ), 
+            'placeholder' => '12%',
+            'type'        => 'number',
+            'desc_tip'    => 'true',
+            'description' => __( 'Enter the Alcohol By Volume value (but not the "%").', 'woocommerce' ) 
+            )
+        
+    );
+
+    // Description
+    woocommerce_wp_textarea_input( 
+        array( 
+            'id'          => 'description', 
+            'label'       => __( 'Description', 'woocommerce' ), 
+            'placeholder' => '', 
+            'desc_tip'    => 'true',
+            'description' => __( 'Enter a description for this wine.', 'woocommerce' ) 
+        )
+    );
+  
+  echo '</div>';
+
+}
+
+
+function woo_add_custom_general_fields_save( $post_id ){
+    
+    // Vintage
+    $woocommerce_text_field = $_POST['vintage'];
+    if( !empty( $woocommerce_text_field ) )
+        update_post_meta( $post_id, 'vintage', esc_attr( $woocommerce_text_field ) );
+        
+   // Location
+    $woocommerce_text_field = $_POST['location'];
+    if( !empty( $woocommerce_text_field ) )
+        update_post_meta( $post_id, 'location', esc_attr( $woocommerce_text_field ) );
+
+     // Abv
+    $woocommerce_text_field = $_POST['abv'];
+    if( !empty( $woocommerce_text_field ) )
+        update_post_meta( $post_id, 'abv', esc_attr( $woocommerce_text_field ) );
+        
+
+    // Description
+    $woocommerce_text_area = $_POST['description'];
+    if( !empty( $woocommerce_text_area ) )
+        update_post_meta( $post_id, 'description', esc_attr( $woocommerce_text_area ) );     
+    
+}
+
+// Display Fields
+add_action( 'woocommerce_product_options_general_product_data', 'woo_add_custom_general_fields' );
+
+// Save Fields
+add_action( 'woocommerce_process_product_meta', 'woo_add_custom_general_fields_save' );
 
 /*------------------------------------*\
 	ShortCode Functions

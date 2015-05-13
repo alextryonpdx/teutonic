@@ -31,7 +31,7 @@
 
 			<?php
 				$posts = query_posts(array(
-					'post_type' => 'wine',
+					'post_type' => 'product',
 					'meta_query' => array(
         					array(
 				            'key' => 'style', 
@@ -49,14 +49,17 @@
 					<a class="wine-link" href="<?php the_permalink(); ?>">
 						<div class="wine">
 							<div class="wine-image">
-								<img src="<?php $image = get_field('image'); echo $image['url'] ?>">
+								<!-- <img src="<?php $image = get_field('image'); echo $image['url'] ?>"> -->
+								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
+								<img src="<?php echo $url; ?>" longdesc="URL_2" alt="Text_2" />
+								
 							</div>
 
 							<div class="overlay">
 								<div class="wine-info">
-								<?php the_field('name') ?><br />
-								<?php the_field('vintage') ?><br />
-								<?php the_field('location') ?><br />
+								<?php echo $post->name ?><br />
+								<?php echo $post->vintage ?><br />
+								<?php echo $post->location ?><br />
 								</div>
 							</div>	
 												

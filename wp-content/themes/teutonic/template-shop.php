@@ -31,7 +31,7 @@
 
 			<?php
 				$posts = query_posts(array(
-					'post_type' => 'wine',
+					'post_type' => 'product',
 					'meta_query' => array(
         					array(
 				            'key' => 'inventory', 
@@ -53,9 +53,10 @@
 									setup_postdata( $post ); ?>	
 					
 					<a class="wine-link" href="<?php the_permalink(); ?>">
-						<div class="wine">
+						<div class="wine-container">
 							<div class="wine-image">
-								<img src="<?php $image = get_field('image'); echo $image['url'] ?>">
+<!-- 								<img src="<?php $image = get_field('image'); echo $image['url'] ?>"> -->
+								<?php echo get_the_post_thumbnail() ?>
 							</div>
 
 							<div class="overlay">
@@ -63,6 +64,7 @@
 								<?php the_field('name') ?><br />
 								<?php the_field('vintage') ?><br />
 								<?php the_field('location') ?><br />
+								<?php the_field('style')?>
 								</div>
 							</div>	
 												

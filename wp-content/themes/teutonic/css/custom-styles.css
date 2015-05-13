@@ -329,7 +329,7 @@ margin: -3em 0 2em 0;
   padding-bottom: .75em;
   margin: 0 1em;
 }
-.wine {
+.wine-container {
   display: inline-block;
   width: 100%;
   overflow: hidden;
