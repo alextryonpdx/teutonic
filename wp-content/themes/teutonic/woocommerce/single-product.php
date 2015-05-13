@@ -3,59 +3,42 @@
 	<main role="main">
 		<!-- section -->
 
-		<section id="content-section">			
+		<section id="content-section">	<?php
+/**
+ * The Template for displaying all single products.
+ *
+ * Override this template by copying it to yourtheme/woocommerce/single-product.php
+ *
+ * @author 		WooThemes
+ * @package 	WooCommerce/Templates
+ * @version     1.6.4
+ */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
-			<div class="single-wine-nav wine-categories" style="display: block; margin: 0 2em 2em">
-				<a href="javascript:history.go(-1)">Go Back</a>
-			</div>
-				
+get_header( 'shop' ); ?>
 
-			<div id="single-wine-image">
-				<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
-				<img src="<?php echo $url; ?>" longdesc="URL_2" alt="Text_2" />
-			</div>
+	<?php
+		/**
+		 * woocommerce_before_main_content hook
+		 *
+		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+		 * @hooked woocommerce_breadcrumb - 20
+		 */
+		do_action( 'woocommerce_before_main_content' );
+	?>
 
+		<?php while ( have_posts() ) : the_post(); ?>
 
-			<div class="wine-heading">
-				<h1><?php echo $post->vintage ?>  <?php echo $post->name ?></h1>
-				<h2><?php echo $post->location ?></h2>
-				<?php if( $post->inventory > 0) { ?>
-					<p>$ <?php echo number_format($post->price, 2) ?></p>
-				<?php } ?>
-			</div>
+			<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-			<div class="single-wine-info">
-				<p><?php echo $post->description ?></p>
-				<p><?php echo $post->abv ?>% Alcohol by volume</p>
+		<?php endwhile; // end of the loop. ?>
+<div class="addtoany_share_save_container addtoany_content_bottom">
 
-
-				<?php if($post->inventory > 0) { ?>
-					<p>*10% off purchases of $250 or more. Use promo code "lotsofwine" when checking out.</p>
-					<div class="single-wine-nav wine-categories" style="display: block; margin: 1em 0">
-						<a href="/shipping-policy">Read our Shipping Policy</a><br /><br />
-					</div>
-					<div class="add-to-cart">
-						<form id="buy-wine-form"  style:"line-height: 1.5em; width: 40%;">
-							<label for="quantity-input" id="quantity-label">Quantity:<br></label>
-							<input type="number" id="quantity-input"><br><br>
-							<button id='add-to-cart' type="submit">ADD TO CART</button>
-						</form>
-
-					</div>	
-
-				<?php } else { ?>
-					<p>Sorry, <?php echo $post->vintage; ?>  <?php echo $post->name; ?> is no longer available.</p>
-				<?php } ?>
-			</div>
-							
-			
-	</section>
-	<?php the_content(); ?>
-	<!-- /section -->
+<?php echo do_shortcode('[addtoany]'); ?>
+</div>
 	</main>
-
+	
 <?php get_footer(); ?>
-
-<!-- add classes to the elements to enable seperation of styles. 
-	some whack spacing between page-title and content. -->
