@@ -14,7 +14,7 @@
 				<input type="submit" name="sb" value="Import" />
 				<input type="submit" name="sb" value="All Wines" />
 			</form>	
-		<p class="wine-categories"><a href="<?php echo get_permalink( get_page_by_path( 'buy-wine' ) ) ?>">Shop for available wines</a></p>
+		<p class="wine-categories"><a href="<?php echo get_permalink( get_page_by_path( 'wineshop' ) ) ?>">Shop for available wines</a></p>
 
 			<?php
 			if(isset($_GET['sb'])) 

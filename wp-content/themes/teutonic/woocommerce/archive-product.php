@@ -4,7 +4,7 @@
 	<main role="main">
 		<section id="content-section">
 
-		<h1 class="page-title"><?php the_title(); ?></h1>
+		<h1 class="page-title">Wine Shop</h1>
 
 		<p class="wine-categories">Find Wines by Category: </p>
 			<form class="wine-categories" method="GET">
@@ -14,7 +14,7 @@
 				<input type="submit" name="sb" value="Import" />
 				<input type="submit" name="sb" value="All Wines" />
 			</form>	
-		<p class="wine-categories"><a href="<?php echo get_permalink( get_page_by_path( 'buy-wine' ) ) ?>">Shop for available wines</a></p>
+		<p class="wine-categories"><a href="shipping-policy/"> Read our Shipping Policy</a></p>
 
 			<?php
 			if(isset($_GET['sb'])) 
@@ -57,9 +57,9 @@
 
 							<div class="overlay">
 								<div class="wine-info">
-								<?php the_field('name') ?><br />
-								<?php the_field('vintage') ?><br />
-								<?php the_field('location') ?><br />
+								<?php echo $post->name ?><br />
+								<?php echo $post->vintage ?><br />
+								<?php echo $post->location ?><br />
 								</div>
 							</div>	
 												

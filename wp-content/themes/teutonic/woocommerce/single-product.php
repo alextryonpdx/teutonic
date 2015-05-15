@@ -35,6 +35,8 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
 		<?php endwhile; // end of the loop. ?>
+
+		
 <div class="addtoany_share_save_container addtoany_content_bottom">
 
 <?php echo do_shortcode('[addtoany]'); ?>

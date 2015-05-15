@@ -53,7 +53,8 @@ figcaption {
   margin: 0 0 1em 0;
   }
 
-.page-title:first-letter {
+.page-title:first-letter,
+.product_title:first-letter {
   font-size: 36px;
   font-family: 'UnifrakturMaguntia', serif;
   font-weight: 400;
@@ -371,7 +372,7 @@ margin: -3em 0 2em 0;
 /********** Single Wine Page *******/
 #single-wine-image {
   width: 35%;
-  margin: 0 3%;
+  margin: 0 2.5%;
   float: left;
   background: #fff;
   display: inline-block;
@@ -384,41 +385,140 @@ margin: -3em 0 2em 0;
   margin: 0 auto;
 
 }
+.attachment-shop_single {
+  width: 50% !important;
+  margin: 0 auto !important;
+  box-shadow: #444 0 0 20px 0 !important;
+}
 
-.single-wine-info {
-  width: 55%;
-  margin: 0 4% 0 0;
+div.thumbnails {
+  padding-top: 1em;
+  width: 80%;
+  margin: 0 2.5% 0 17.5%;
+}
+.images img.attachment-shop_thumbnail {
+  width: 65% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: #444 0 0 20px 0 !important;
+}
+
+.single-wine-info,
+.summary {
+  width: 46% !important;
+  margin: 0 4% 0 2% !important;
+  line-height: 2em;
+  float: left;
+  display: inline-block;
+  padding: 0 1% 0 0 !important;
+}
+
+.summary p {
+  line-height: 2em;
+}
+
+.wine-heading,
+.product_title {
+  width: 80%;
+  margin: 0 15% 0 0;
   line-height: 2em;
   float: left;
   display: inline-block;
   padding: 0 1% 0 0;
 }
-.wine-heading {
+.wine-subheading {
   border-bottom: 2px solid rgba(157, 157, 157, .6);
-  width: 45%;
-  margin: 0 12% 0 0;
-  line-height: 2em;
+  width: 95%;
+  margin: 0 5% 2% 0;
+  padding-bottom: 1%;
   float: left;
-  display: inline-block;
-  padding: 0 1% 0 0;
 }
-#add-to-cart {
-  font-size: 1.25em;
-  width: 33%;
-  padding: 1em 2em;
-  background-color: #444;
-  border: solid 1px #202020;
-  color: #eae8d9;
-  border-radius: 5px;
+
+.price {
+  color: #444 !important;
 }
-#quantity-input {
+.stock,
+.posted_in {
+  display: none !important;
+}
+
+
+form.cart {
+  padding: 6% 0px;
+  margin-left: 3em !important;
+}
+
+#add-to-cart,
+.single_add_to_cart_button {
+  font-size: 1.25em !important;
   width: 33%;
+  padding: .666em 2em !important;
+  background-color: #444 !important;
+  border: solid 1px #202020 !important;
+  color: #eae8d9 !important;
+  border-radius: 5px !important;
+}
+#quantity-input,
+.quantity input,
+.coupon input {
+  width: 5em !important;
   border: solid 1px #444;
   border-radius: 3px;
-  padding: .25em 1em;
+  padding: .5em 0 !important;
+  margin-right: .666em !important;
+  font-size: 1.25em !important;
+  font-weight: bold !important;
 }
 #quantity-label {
   font-size: 1.35em;
+}
+
+.actions input {
+  width: 8em !important;
+  font-size: 1.25em;
+}
+.woocommerce input.button {
+  font-size: 1.25 !important;
+}
+
+.state_select {
+  margin-top: .5em;
+}
+aa ae ap as gu mp pr um vi
+option[value="AR"],
+option[value="KY"],
+option[value="MA"],
+option[value="MS"],
+option[value="NH"],
+option[value="PA"],
+option[value="TX"],
+option[value="UT"],
+option[value="AA"],
+option[value="AE"],
+option[value="AP"],
+option[value="AS"],
+option[value="GU"],
+option[value="MP"],
+option[value="PR"],
+option[value="UM"],
+option[value="VI"] {
+  display: none;
+}
+
+.checkout-button {
+  width: 17em !important;
+}
+
+#show-cart-link {
+  font-size: 1.5em;
+  background-color: #696861;
+  border-radius: 1em;
+  border: 1px solid#444444;
+  padding: .5em 3em !important;
+  position: fixed;
+  top: 10%;
+  right: 17%;
+  color: #fff;
 }
 
 /***********CONTACT***********************/
@@ -728,6 +828,19 @@ margin: -3em 0 2em 0;
 }
 .main-nav {
     display: none;
+}
+#show-cart-link {
+  font-size: 1.5em;
+  background-color: #494948;
+  border-radius: 1em;
+  border: none !important;
+  padding: .5em 1em !important;
+  position: fixed;
+  top: 21px;
+  left: 20px;
+  right: auto;
+  color: #fff;
+  z-index: 9999999;
 }
 .wine-link {
   width: 48%;

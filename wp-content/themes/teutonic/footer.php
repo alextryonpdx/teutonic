@@ -1,4 +1,7 @@
+<?php global $woocommerce; if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) : ?>
+        <a id="show-cart-link" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">View your Cart</a>
 
+   <?php endif; ?>
 
 	</section>
 	</main>
