@@ -11,7 +11,6 @@
 				<input type="submit" name="sb" value="Red" />
 				<input type="submit" name="sb" value="White" />
 				<input type="submit" name="sb" value="Sparkling" />
-				<input type="submit" name="sb" value="Import" />
 				<input type="submit" name="sb" value="All Wines" />
 			</form>	
 		<p class="wine-categories"><a href="<?php echo get_permalink( get_page_by_path( 'wineshop' ) ) ?>">Shop for available wines</a></p>
@@ -33,10 +32,16 @@
 				$posts = query_posts(array(
 					'post_type' => 'product',
 					'meta_query' => array(
+						'relation' => 'AND',
         					array(
 				            'key' => 'style', 
 				            'value' => $style, 
 				            'compare' => 'LIKE'
+				        ),
+        					array(
+				            'key' => 'style', 
+				            'value' => 'Import', 
+				            'compare' => 'NOT LIKE'
 				        )
 				    )
 									    ));
@@ -57,7 +62,7 @@
 
 							<div class="overlay">
 								<div class="wine-info">
-								<?php echo $post->name ?><br />
+								<?php echo $post->post_title ?><br />
 								<?php echo $post->vintage ?><br />
 								<?php echo $post->location ?><br />
 								</div>

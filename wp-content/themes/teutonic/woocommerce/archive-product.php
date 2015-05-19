@@ -25,27 +25,47 @@
 			else
 				$style = '';
 			?>
-			<div class="row">
-
-				<div class="event">
+		
+		<div>
 
 			<?php
-				$posts = query_posts(array(
+			global $product;
+
+					if ($style == 'Import') {$posts = query_posts(array(
 					'post_type' => 'product',
 					'meta_query' => array(
+						'relation' => 'OR',
         					array(
 				            'key' => 'style', 
 				            'value' => $style, 
 				            'compare' => 'LIKE'
+				        ),
+				    )
+									    ));} else {
+				$posts = query_posts(array(
+					'post_type' => 'product',
+					'meta_query' => array(
+						'relation' => 'AND',
+        					array(
+				            'key' => 'style', 
+				            'value' => $style, 
+				            'compare' => 'LIKE'
+				        ),
+        					array(
+				            'key' => 'style', 
+				            'value' => 'Import', 
+				            'compare' => 'NOT LIKE'
 				        )
 				    )
-									    ));
+									    ));}
 
 				if( $posts ) {
 					foreach( $posts as $post ) { 
 
 									setup_postdata( $post ); ?>	
-					
+					<?php 
+					$availability = $product->get_availability();
+					if ($availability['availability'] !== 'Out of stock'){ ?>
 					<a class="wine-link" href="<?php the_permalink(); ?>">
 						<div class="wine">
 							<div class="wine-image">
@@ -57,7 +77,7 @@
 
 							<div class="overlay">
 								<div class="wine-info">
-								<?php echo $post->name ?><br />
+								<?php echo $post->post_title ?><br />
 								<?php echo $post->vintage ?><br />
 								<?php echo $post->location ?><br />
 								</div>
@@ -69,9 +89,9 @@
 				<?php };
 				wp_reset_query();
 			}
-
+}
 			?>
-
+		</div>
 
 	</section>
 

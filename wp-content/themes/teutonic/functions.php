@@ -581,8 +581,8 @@ function woo_add_custom_general_fields() {
         array( 
             'id'          => 'abv', 
             'label'       => __( 'Abv %', 'woocommerce' ), 
-            'placeholder' => '12%',
-            'type'        => 'number',
+            'placeholder' => '12',
+            'type'        => 'float',
             'desc_tip'    => 'true',
             'description' => __( 'Enter the Alcohol By Volume value (but not the "%").', 'woocommerce' ) 
             )

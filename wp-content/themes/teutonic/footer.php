@@ -1,4 +1,4 @@
-<?php global $woocommerce; if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) : ?>
+<?php global $woocommerce; if ( sizeof( $woocommerce->cart->cart_contents) > 0 && !is_page('cart')) : ?>
         <a id="show-cart-link" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">View your Cart</a>
 
    <?php endif; ?>

@@ -447,7 +447,10 @@ form.cart {
   padding: 6% 0px;
   margin-left: 3em !important;
 }
-
+.woocommerce a.remove:hover {
+  color: #7CD9AD!important;
+   background: none !important; 
+}
 #add-to-cart,
 .single_add_to_cart_button {
   font-size: 1.25em !important;
