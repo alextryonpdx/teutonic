@@ -595,6 +595,7 @@ function woo_add_custom_general_fields() {
             'id'          => 'description', 
             'label'       => __( 'Description', 'woocommerce' ), 
             'placeholder' => '', 
+            'type' => 'textarea',
             'desc_tip'    => 'true',
             'description' => __( 'Enter a description for this wine.', 'woocommerce' ) 
         )

@@ -77,9 +77,9 @@
 
 							<div class="overlay">
 								<div class="wine-info">
-								<?php echo $post->post_title ?><br />
-								<?php echo $post->vintage ?><br />
-								<?php echo $post->location ?><br />
+								<?php if ($post->post_title) {echo $post->post_title;?><br /><?php }?>
+								<?php if ($post->vintage) {echo $post->vintage; ?><br /><?php }?>
+								<?php if ($post->location) {echo $post->location; ?><br /><?php }?>
 								</div>
 							</div>	
 												

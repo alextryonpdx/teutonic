@@ -15,10 +15,12 @@ $product_object = get_post($post);
 
 
 ?>
-<h1 itemprop="name" class="product_title entry-title"><?php echo $post->post_title; ?> - <?php echo $post->vintage; ?></h1><br /><br />
+<h1 itemprop="name" class="entry-title"><?php echo $post->vintage; ?> <?php echo $post->post_title; ?> </h1>
 <h2 class="wine-subheading entry-title"><?php echo $post->location ?></h2>
 
 				<p><?php echo $post->description ?></p>
-				<p><?php echo $post->abv ?>% Alcohol by volume</p>
-			
+				
+				<?php if ($post->abv){ ?>
+					<p><?php echo $post->abv ?>% Alcohol by volume</p>
+				<?php } ?>
 		
