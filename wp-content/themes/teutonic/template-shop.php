@@ -19,7 +19,7 @@
 			<?php
 			if(isset($_GET['sb'])) 
 				if ($_GET['sb'] == "All Wines")
-					$style = '';
+					$style = array('Red', 'White', 'Sparkling', 'Import');
 				else
 					$style = $_GET['sb'];
 			else
@@ -42,7 +42,7 @@
         					array(
 				            'key' => 'style', 
 				            'value' => $style, 
-				            'compare' => 'LIKE'
+				            'compare' => 'IN'
 				        )
 				    )
 									    )));

@@ -19,7 +19,7 @@
 			<?php
 			if(isset($_GET['sb'])) 
 				if ($_GET['sb'] == "All Wines")
-					$style = '';
+					$style = 'all';
 				else
 					$style = $_GET['sb'];
 			else
@@ -41,6 +41,9 @@
 				            'compare' => 'LIKE'
 				        ),
 				    )
+									    ));} 
+					elseif ($style == 'all') {$posts = query_posts(array(
+					'post_type' => 'product'
 									    ));} else {
 				$posts = query_posts(array(
 					'post_type' => 'product',

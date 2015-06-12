@@ -24,9 +24,13 @@
 											<p class="day"><?php echo $day ?></p>
 										</div>
 
+										<?php if(get_field('event_start') && get_field('event_end')) {?>
 										<div class="time">
 											<p><?php the_field('event_start')?></p>
+											<p style="text-align:center;"> - </p>
+											<p><?php the_field('event_end')?></p>
 										</div>
+										<?php } ?>
 									</div>
 								</div>
 

@@ -43,6 +43,9 @@ figcaption {
 #content-section p {
   font-family: 'PT Serif', serif;
   font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: .02em;
 }
 
 /**** Page Title ****/
@@ -56,16 +59,21 @@ figcaption {
 .page-title:first-letter,
 .product_title:first-letter {
   font-size: 36px;
-  font-family: 'UnifrakturMaguntia', serif;
-  font-weight: 400;
+  font-family: 'Niconne', serif;
+  font-weight: bold;
   }
 
 /* EXPANDED CLICK-AREA */
 a {
-position: relative;
-padding: .75em;
-margin: -.75em;
+  position: relative;
+  padding: .75em;
+  margin: -.75em;
+  font-weight: 600;
 }
+input {
+    font-weight: 600;
+}
+
 
 
 /************** HEADER ************/
@@ -144,10 +152,12 @@ html.mn-open .mn-navigation-wrap li {
 
 .main-nav li {
     display: inline-block;
-    font-family: "Open Sans", georgia, serif;
+    font-family: 'PT Serif', serif;
     font-size: 1.5em;
     line-height: 100%;
     text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .main-nav li a {
@@ -206,7 +216,7 @@ position: relative;
 .slides figure {
 opacity: 0;
 transition: opacity 3s;
-height: 100%;
+/*height: 100%;*/
 position: absolute;
 top: 50%;
 transform: translateY(-50%);
@@ -233,7 +243,7 @@ margin: -3em 0 2em 0;
 
 /**************** MainPage (Content)***********/
 .title:first-letter {
-  font-family: 'UnifrakturMaguntia', serif;
+  font-family: 'Niconne', serif;
   font-size: 28px;
 }
 
@@ -276,6 +286,9 @@ margin: -3em 0 2em 0;
 .a2a_menu_show_more_less {
   display: none !important;
 }
+.a2a_menu {
+    background-color: #EAE8D9;
+}
 
 /********************* FOOTER *****************/
 
@@ -305,7 +318,7 @@ margin: -3em 0 2em 0;
   /****************** WINE CELLAR ************/
   .overlay {
   position: absolute;
-  width: 100%;
+  width: 97%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -347,6 +360,10 @@ margin: -3em 0 2em 0;
   position: relative;
   overflow: hidden;
   width: 100%
+}
+
+.wine {
+    max-width: 97%;
 }
 
 .wine-categories {
@@ -406,7 +423,7 @@ div.thumbnails {
 .single-wine-info,
 .summary {
   width: 46% !important;
-  margin: 0 4% 0 2% !important;
+  margin: 0 2% !important;
   line-height: 2em;
   float: left;
   display: inline-block;
@@ -487,7 +504,7 @@ form.cart {
 .state_select {
   margin-top: .5em;
 }
-aa ae ap as gu mp pr um vi
+
 option[value="AR"],
 option[value="KY"],
 option[value="MA"],
@@ -609,7 +626,7 @@ option[value="VI"] {
 }
 
 .col-5of8 iframe {
-  max-width: 42vw !important;
+  max-width: 39vw !important;
 }
 
 
@@ -831,6 +848,9 @@ option[value="VI"] {
 }
 .main-nav {
     display: none;
+}
+.single_add_to_cart_button{
+  width: inherit;
 }
 #show-cart-link {
   font-size: 1.5em;

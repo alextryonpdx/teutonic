@@ -2,7 +2,7 @@
 
 
 
-	<main role="main">
+    <main role="main">
 
 		<section id="content-section">
 
@@ -48,10 +48,13 @@
 											<p class="month"><?php echo $month ?></p>
 											<p class="day"><?php echo $day ?></p>
 										</div>
-
+										<?php if(get_field('event_start') && gete_field('event_end')) {?>
 										<div class="time">
 											<p><?php the_field('event_start')?></p>
+											<p style="text-align:center;"> - </p>
+											<p><?php the_field('event_end')?></p>
 										</div>
+										<?php } ?>
 									</div>
 								</div>
 
@@ -61,9 +64,9 @@
 							<div class="col col9of10 right">
 
 								<div class="event-heading">
-																	<div class="small-date-time">
-									<p><?php echo $dow ?>, <?php echo $longmonth ?> <?php echo $day ?></p>
-								</div>
+									<div class="small-date-time">
+										<p><?php echo $dow ?>, <?php echo $longmonth ?> <?php echo $day ?></p>
+									</div>
 									<a href="<?php the_permalink(); ?>">
 										<p id="event-title"><?php the_title() ?></p>
 										<p id="event-location"><?php the_field('event_location_name') ?></p>
