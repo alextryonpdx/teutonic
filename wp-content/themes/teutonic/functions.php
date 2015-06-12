@@ -544,25 +544,25 @@ add_action( 'init', 'buzz_post_type', 0 );
 function cellar_wine_post_type() {
 
     $labels = array(
-        'name'                => __( 'cellar wines', 'Post Type General Name', 'text_domain' ),
-        'singular_name'       => __( 'cellar wine', 'Post Type Singular Name', 'text_domain' ),
-        'menu_name'           => __( 'cellar wine', 'text_domain' ),
-        'name_admin_bar'      => __( 'cellar wine', 'text_domain' ),
-        'parent_item_colon'   => __( 'cellar wine', 'text_domain' ),
-        'all_items'           => __( 'All  cellar wines', 'text_domain' ),
-        'add_new_item'        => __( 'Add New cellar wine', 'text_domain' ),
-        'add_new'             => __( 'New cellar wine', 'text_domain' ),
-        'new_item'            => __( 'New cellar wine', 'text_domain' ),
-        'edit_item'           => __( 'Edit cellar wine', 'text_domain' ),
-        'update_item'         => __( 'Update cellar wine', 'text_domain' ),
-        'view_item'           => __( 'View cellar wine', 'text_domain' ),
-        'search_items'        => __( 'Search cellar wines', 'text_domain' ),
-        'not_found'           => __( 'No cellar wines found', 'text_domain' ),
-        'not_found_in_trash'  => __( 'No cellar wines found in Trash', 'text_domain' ),
+        'name'                => __( 'Cellar Wines', 'Post Type General Name', 'text_domain' ),
+        'singular_name'       => __( 'Cellar Wine', 'Post Type Singular Name', 'text_domain' ),
+        'menu_name'           => __( 'Cellar Wine', 'text_domain' ),
+        'name_admin_bar'      => __( 'Cellar Wine', 'text_domain' ),
+        'parent_item_colon'   => __( 'Cellar Wine', 'text_domain' ),
+        'all_items'           => __( 'All  Cellar Wines', 'text_domain' ),
+        'add_new_item'        => __( 'Add New Cellar Wine', 'text_domain' ),
+        'add_new'             => __( 'New Cellar Wine', 'text_domain' ),
+        'new_item'            => __( 'New Cellar Wine', 'text_domain' ),
+        'edit_item'           => __( 'Edit Cellar Wine', 'text_domain' ),
+        'update_item'         => __( 'Update Cellar Wine', 'text_domain' ),
+        'view_item'           => __( 'View Cellar Wine', 'text_domain' ),
+        'search_items'        => __( 'Search Cellar Wines', 'text_domain' ),
+        'not_found'           => __( 'No Cellar Wines found', 'text_domain' ),
+        'not_found_in_trash'  => __( 'No Cellar Wines found in Trash', 'text_domain' ),
     );
     $args = array(
-        'label'               => __( 'cellar wine', 'text_domain' ),
-        'description'         => __( 'cellar wine', 'text_domain' ),
+        'label'               => __( 'Cellar Wine', 'text_domain' ),
+        'description'         => __( 'Cellar Wine', 'text_domain' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'custom-fields' ),
         'taxonomies'          => array(),
@@ -579,7 +579,7 @@ function cellar_wine_post_type() {
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
     );
-    register_post_type( 'cellar wine', $args );
+    register_post_type( 'Cellar Wine', $args );
 
 }
 
